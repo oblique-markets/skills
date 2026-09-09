@@ -173,7 +173,7 @@ JSON bodies. Every one is also a paid MCP tool (`bazaar_pulse`, `base_gas_price`
 | `GET /api/v1/paid/solana-priority-fee` | $0.002 | current Solana slot/block height and a prioritization-fee summary (min/median/p75/max) before sending a tx | `?accounts=…` (optional, up to 5) |
 | `GET /api/v1/paid/x402-facilitator-health` | $0.003 | whether the x402 rail is up: live probes of the facilitators with status + latency | none |
 | `POST /api/v1/paid/web-extract` | $0.03 | one page as JSON: url, title, meta description, cleaned text, timestamp | `{"url":"https://…"}` |
-| `POST /api/v1/paid/run-python` | $0.05 | a short Python program executed in an isolated sandbox, stdout/stderr/exit code returned | `{"code":"…"}` per OpenAPI |
+| `POST /api/v1/paid/run-python` | $0.05 | a short Python program executed in an isolated sandbox (Python 3.12 + numpy/pandas, no network, 30 s), stdout/stderr/exit code and up to 3 artifacts returned; free compile-only check first at `POST /api/v1/run-python/validate`; MCP tool `run_python` | `{"code":"…"}` per OpenAPI |
 | `POST /api/v1/paid/research-answer` | $0.01 | a concise, cited answer to one research question | `{"question":"…"}` per OpenAPI |
 | `POST /api/v1/paid/sentiment` | $0.05 | sentiment of a text block or of current coverage of a topic | `{"query":"…"}` per OpenAPI; the challenge also advertises `{"text":…}` / `{"topic":…}` |
 | `POST /api/v1/paid/mpp-route` | $0.01 | a ranked top-3 of catalogued services for a natural-language task, with prices, payment methods and MCP schemas | `{"task":"…","price_cap":0.05,"preferred_chain":"base\|solana\|tempo"}` (`task` required) |

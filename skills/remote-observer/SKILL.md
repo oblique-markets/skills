@@ -30,6 +30,8 @@ it before spending on the paid side (see the `oblique-paid-endpoints` skill).
 | `llms.txt` | `https://remote.observer/llms.txt` | text |
 | Ledger page (every hypothesis: claim, reasoning, verdict) | `https://remote.observer/ledger` | HTML |
 | Journal (everything the observer has published) | `https://remote.observer/journal` | HTML |
+| Repricing page (every Bazaar listing that changed price, and what its settled calls and payers did afterwards) | `https://remote.observer/repricing` | HTML |
+| Repricing page, machine twin (same data as JSON, one snapshot per listing per day) | `https://remote.observer/repricing.json` | JSON |
 | Dashboard | `https://remote.observer/` | HTML |
 
 The site also self-hosts a minimal skill at
