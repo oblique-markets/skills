@@ -1,0 +1,13 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "groupings": [
+    {
+      "title": "Buying over x402 / MPP",
+      "skills": ["oblique-paid-endpoints"]
+    },
+    {
+      "title": "x402 market research",
+      "skills": ["x402-bazaar-research", "remote-observer"]
+    }
+  ]
+}
