@@ -93,12 +93,12 @@ input after payment, which settles nothing.
 The v2 SDKs read the 402, pick a network you configured, sign the USDC authorization, and
 retry with `PAYMENT-SIGNATURE`. Working files in `oblique-markets/oblique-examples`:
 
-| Client | File | Buys |
+| Client | File (in the oblique-examples repo) | Buys |
 |---|---|---|
-| TypeScript, `@x402/fetch` + viem | `examples/typescript/x402-fetch/index.ts` | `/api/v1/paid/time`, $0.01 |
-| TypeScript, Vercel AI SDK `tool()` | `examples/typescript/vercel-ai-tool/bazaar-pulse-tool.ts` | `bazaar-pulse` |
-| Python, `x402[requests,evm]` | `examples/python/requests/pay_for_time.py` | `time` |
-| Python, LangChain `@tool` | `examples/python/langchain-tool/bazaar_pulse_tool.py` | `bazaar-pulse` |
+| TypeScript, `@x402/fetch` + viem | `oblique-examples/examples/typescript/x402-fetch/index.ts` | `/api/v1/paid/time`, $0.01 |
+| TypeScript, Vercel AI SDK `tool()` | `oblique-examples/examples/typescript/vercel-ai-tool/bazaar-pulse-tool.ts` | `bazaar-pulse` |
+| Python, `x402[requests,evm]` | `oblique-examples/examples/python/requests/pay_for_time.py` | `time` |
+| Python, LangChain `@tool` | `oblique-examples/examples/python/langchain-tool/bazaar_pulse_tool.py` | `bazaar-pulse` |
 
 All four take the private key of a Base wallet holding a little USDC and set an explicit
 per-payment ceiling so a mispriced challenge fails instead of spending. Use a dedicated,
