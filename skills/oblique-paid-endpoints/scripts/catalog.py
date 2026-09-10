@@ -38,7 +38,7 @@ def clean_description(text):
 
 
 def fetch(url):
-    r = requests.get(url, headers={"User-Agent": "oblique-skill-catalog/1.1"}, timeout=30)
+    r = requests.get(url, headers={"User-Agent": "oblique-skills/1.2.0 (oblique-paid-endpoints)"}, timeout=30)
     r.raise_for_status()
     return r.json()
 

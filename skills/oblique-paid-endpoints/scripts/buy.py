@@ -34,7 +34,7 @@ import requests
 
 DEFAULT_HOST = "https://api.oblique.markets"
 PAID_PREFIX = "/api/v1/paid/"
-USER_AGENT = "oblique-skill-buy/1.1"
+USER_AGENT = "oblique-skills/1.2.0 (oblique-paid-endpoints)"
 CHAIN_IDS = {"eip155:8453": 8453}
 
 

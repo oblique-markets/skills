@@ -9,9 +9,9 @@ route="${1:?route, e.g. bazaar-pulse}"; method="${2:-GET}"; body="${3:-}"
 url="https://api.oblique.markets/api/v1/paid/${route#/}"
 hdr="$(mktemp)"; trap 'rm -f "$hdr"' EXIT
 if [ "$method" = "POST" ]; then
-  resp="$(curl -sS -m 30 -A oblique-skill-quote/1.0 -D "$hdr" -X POST -H 'Content-Type: application/json' -d "${body:-{\}}" "$url")"
+  resp="$(curl -sS -m 30 -A "oblique-skills/1.2.0 (oblique-paid-endpoints)" -D "$hdr" -X POST -H 'Content-Type: application/json' -d "${body:-{\}}" "$url")"
 else
-  resp="$(curl -sS -m 30 -A oblique-skill-quote/1.0 -D "$hdr" "$url")"
+  resp="$(curl -sS -m 30 -A "oblique-skills/1.2.0 (oblique-paid-endpoints)" -D "$hdr" "$url")"
 fi
 code="$(sed -n 's#^HTTP/[0-9.]* \([0-9]*\).*#\1#p' "$hdr" | tail -1)"
 echo "HTTP $code  $method $url"

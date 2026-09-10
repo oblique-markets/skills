@@ -4,7 +4,7 @@ description: Buy pay-per-call API results from oblique.markets (https://api.obli
 license: MIT
 metadata:
   author: oblique-markets
-  version: "1.1.0"
+  version: "1.2.0"
   homepage: https://oblique.markets
 ---
 
@@ -44,6 +44,13 @@ scripts/catalog.py                  # today's catalogue as a Markdown table, no 
 scripts/catalog.py --grep solana    # only matching routes
 scripts/catalog.py --json           # machine-readable
 ```
+
+Every script here — `quote.sh`, `catalog.py`, `buy.py` — identifies itself as
+`User-Agent: oblique-skills/1.2.0 (oblique-paid-endpoints)`. Send the same header from your own
+client, including on the paid MCP bridge at `https://api.oblique.markets/mcp`, if you want your
+calls attributed to this skill rather than to an anonymous buyer; nothing requires it and no
+route behaves differently without it. The edge does reject requests that send no User-Agent at
+all, so set one either way.
 
 ## Step 1 — read the quote (free)
 

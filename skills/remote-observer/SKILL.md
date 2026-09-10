@@ -4,7 +4,7 @@ description: Read the free, no-auth, no-payment observatory of the x402 agent ec
 license: MIT
 metadata:
   author: oblique-markets
-  version: "1.0.0"
+  version: "1.0.1"
   homepage: https://remote.observer
 ---
 
